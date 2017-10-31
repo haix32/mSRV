@@ -17,7 +17,7 @@ function setPerms()
 	wd=$(pwd)
 	cd /
 	chmod -R o=r .
-	find -type d chmod o+x {} +
+	find -type d -exec chmod o+x {} +
 	chmod -R ugo+x /usr/bin/
 }
 
